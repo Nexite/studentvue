@@ -21,10 +21,15 @@ export function fourToPercent(grade) {
 }
 
 export function percentToLetter(grade) {
-	if (grade >= 90) return 'A'
-	else if (grade >= 80) return 'B'
-	else if (grade >= 70) return 'C'
-	else if (grade === 60) return 'D'
+	if (Math.round(grade) >= 93) return 'A'
+	else if (Math.round(grade) >= 90) return 'A-'
+	else if (Math.round(grade) >= 87) return 'B+'
+	else if (Math.round(grade) >= 83) return 'B'
+	else if (Math.round(grade) >= 80) return 'B-'
+	else if (Math.round(grade) >= 77) return 'C+'
+	else if (Math.round(grade) >= 73) return 'C'
+	else if (Math.round(grade) >= 70) return 'C-'
+	else if (Math.round(grade) >= 60) return 'D'
 	else return 'F'
 }
 
